@@ -106,11 +106,19 @@ function checkForItems() {
         if (Array.isArray(room.contains)) {
             for (const item of room.contains) {
                 gameState.inventory.push(item);
-                showMessage(`You found a ${item}!`);
+                if (item === 'Red Orb') {
+                    showMessage("You found a Red Orb! Try using it to unlock the Living Room.");
+                } else {
+                    showMessage(`You found a ${item}!`);
+                }
             }
         } else {
             gameState.inventory.push(room.contains);
-            showMessage(`You found a ${room.contains}!`);
+            if (room.contains === 'Red Orb') {
+                showMessage("You found a Red Orb! Try using it to unlock the Living Room.");
+            } else {
+                showMessage(`You found a ${room.contains}!`);
+            }
         }
         updateInventory();
     }
