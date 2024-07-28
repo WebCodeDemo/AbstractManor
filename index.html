@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Manor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Abstract Manor</h1>
+        
+        <div id="game-area">
+            <div id="map-container">
+                <h2>Map</h2>
+                <div id="map">
+                    <!-- Map areas will be dynamically added here -->
+                </div>
+            </div>
+            
+            <div id="inventory-container">
+                <h2>Inventory</h2>
+                <div id="inventory">
+                    <button class="inventory-item selected" data-item="none">None</button>
+                    <!-- Other inventory items will be dynamically added here -->
+                </div>
+            </div>
+            
+            <div id="description-container">
+                <h2>Description</h2>
+                <p id="room-description"></p>
+            </div>
+            
+            <div id="message-container">
+                <p id="game-message"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

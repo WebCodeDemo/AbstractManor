@@ -1,0 +1,155 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    background-color: #001f3f;
+    color: #00ffff;
+}
+
+#game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+/* Map Styles */
+#map-container {
+    background-color: #002b56;
+    border: 2px solid #00ffff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#map {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.room {
+    background-color: transparent;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+}
+
+.room:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+.room.locked {
+    border-color: #004080;
+    color: #004080;
+    cursor: not-allowed;
+}
+
+/* Inventory Styles */
+#inventory-container {
+    background-color: #002b56;
+    border: 2px solid #00ffff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#inventory {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.inventory-item {
+    background-color: transparent;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.inventory-item:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+/* Updated styles for selected inventory item */
+.inventory-item.selected {
+    background-color: #00ffff;
+    color: #001f3f;
+    font-weight: bold;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+/* Description Styles */
+#description-container {
+    background-color: #002b56;
+    border: 2px solid #00ffff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#room-description {
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Message Styles */
+#message-container {
+    background-color: #002b56;
+    border: 2px solid #00ffff;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#game-message {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Blueprint Grid */
+#game-area {
+    position: relative;
+}
+
+#game-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Handwritten Note Effect */
+.handwritten {
+    font-family: 'Brush Script MT', cursive;
+    color: #ffcc00;
+    font-size: 1.2em;
+    transform: rotate(-5deg);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
